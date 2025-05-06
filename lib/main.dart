@@ -15,6 +15,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
+  //Here Above is the runapp
 }
 
 class MyApp extends StatelessWidget {
@@ -25,9 +26,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Signup Demo',
+      title: 'Project Vehicle',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.deepPurple),
-       initialRoute: '/',
+      initialRoute: '/',
       routes: {
         '/': (context) => LoginScreen(),
         '/signup': (context) => SignUpScreen(),
@@ -38,9 +39,6 @@ class MyApp extends StatelessWidget {
         '/allDrivers': (context) => AllDriversScreen(),
         '/addExpense': (context) => AddExpenseScreen(),
         '/allExpenses': (context) => AllExpensesScreen(),
-      // home: SignUpScreen(),
-      // routes: {
-      //   '/home': (context) => HomeScreen(),
       },
     );
   }
